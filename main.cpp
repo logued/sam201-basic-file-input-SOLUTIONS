@@ -14,6 +14,10 @@ int main() {
             cout << aWord << " "; // print each word to the screen followed by a space
         }
     }
+    else
+    {
+        cout << "Unable to open file" <<endl;
+    }
     return 0;
 }
 
