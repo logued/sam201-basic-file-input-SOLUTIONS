@@ -48,15 +48,19 @@ void read_word_by_word(ifstream &ifs) {  // ifs is a reference to an input file 
     string word;
     while (!ifs.eof()) {        // while not at the end of the file
         ifs >> word;            // extract a word from the stream into the variable 'word'(as a string)
-        cout << word << " ";    // print out the word to the screen followed by a space
+        cout << word << "\n";    // print out the word to the screen followed by a space
     }
 }
 
-void read_line_by_line(ifstream &ifstream1) {
+/**
+ * Read text from an input stream line-by-line and print each line.
+ * @param ifs - reference to an Input File Stream object
+ */
+void read_line_by_line(ifstream& ifs) {
     string line;
-    while (getline(ifstream1, line))     // while not at end of file, read a line
+    while (getline(ifs, line))     // while not at end of file, read a full line of text
     {
-        cout << line << " ";   // print each word to the screen followed by a space
+        cout << line << "\n";   // print the line to the screen followed by a space
     }
 }
 
